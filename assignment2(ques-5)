@@ -1,0 +1,50 @@
+#include<stdio.h>
+int main()
+    {
+    struct Rectangle
+    {
+        int length;
+        int breadth;
+        int area;
+    };
+    struct Circle
+    {
+        int radius;
+        float area;
+    };
+    struct Triangle 
+    { 
+        float base;
+        float height;
+        float area;
+    };
+    struct Rectangle ob1;
+    struct Circle ob2;
+    struct Triangle ob3;
+    printf("\nMenu : 1.Rectangle 2.Circle 3.Triangle");
+    int n;
+    const float pi=3.14;
+    printf("\nenter your choice:");
+    scanf("%d",&n);
+    switch(n)
+    {
+    case 1:
+    printf("\nenter the length and breadth ");
+    scanf("%d%d",&ob1.length,&ob1.breadth);
+    ob1.area =ob1.length*ob1.breadth;
+     printf("\nrectangular area is :%d\n",ob1.area);
+     break;
+    case 2:
+     printf("\nenter the radius ");
+    scanf("%d",&ob2.radius);
+    ob2.area =pi*ob2.radius*ob2.radius;
+    printf("\ncircle area is:%f\n",ob2.area);
+    break;
+    case 3:
+     printf("\nenter the base and height ");
+    scanf("%f%f",&ob3.base,&ob3.height);
+    ob3.area =0.5*ob3.base*ob3.height;
+    printf("\ntriangle area is :%f",ob3.area);
+    break;
+    }
+    }
